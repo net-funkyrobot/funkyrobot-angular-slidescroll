@@ -1,3 +1,1 @@
-/**
- * Created by christopher on 14/07/15.
- */
+angular.module('demoApp', ['frSlidescroll']);

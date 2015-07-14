@@ -3,25 +3,33 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Funkyrobot Angular Slidescroll UI</title>
+
+    <!-- Angular slidescroll required resources -->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.js"></script>
     <link rel="stylesheet" type="text/css" href="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.css" />
-    <style>
 
-    </style>
+    <!-- Demo related resources -->
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+
 </head>
-<body>
+<body ng-app="demoApp">
 
     <slidescroll>
 
         <slide>
-            <h1>Slide #1</h1>
-            <p>Scroll up and down or press the arrow keys to navigate between slides.</p>
+            <div class="wrap col">
+                <h1>Slide #1</h1>
+                <p>Scroll up and down or press the arrow keys to navigate between slides.</p>
+            </div>
         </slide>
 
         <slide>
-            <h1>Slide #1</h1>
-            <p>All slide transitions work using a custom JS event: "TransitionEvent"</p>
+            <div class="wrap col">
+                <h1>Slide #2</h1>
+                <p>All slide transitions work using a custom JS event: "TransitionEvent"</p>
+            </div>
         </slide>
 
     </slidescroll>

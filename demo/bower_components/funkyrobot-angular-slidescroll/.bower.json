@@ -1,0 +1,22 @@
+{
+  "name": "funkyrobot-angular-slidescroll",
+  "main": "angular-slidescroll.js",
+  "ignore": [
+    "**/.*",
+    "demo"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  },
+  "homepage": "https://github.com/net-funkyrobot/funkyrobot-angular-slidescroll",
+  "_release": "c29744a54f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c29744a54f3b9c1587d47738e2d9ec443247bfdb"
+  },
+  "_source": "git://github.com/net-funkyrobot/funkyrobot-angular-slidescroll.git",
+  "_target": "*",
+  "_originalSource": "net-funkyrobot/funkyrobot-angular-slidescroll",
+  "_direct": true
+}
