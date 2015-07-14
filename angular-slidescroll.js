@@ -1,4 +1,4 @@
-var app = angular.module('frSlidescroll', ['ngTouch']);
+var app = angular.module('frSlidescroll', []);
 
 app.directive('frSlidescroll', ['$document', function($document) {
 
