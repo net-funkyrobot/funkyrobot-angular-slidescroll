@@ -1,6 +1,6 @@
 var app = angular.module('frSlidescroll', []);
 
-app.directive('frSlidescroll', ['$document', function($document) {
+app.directive('slidescroll', ['$document', function($document) {
 
     function controller($scope) {
         $scope.viewFinderElement = null;
