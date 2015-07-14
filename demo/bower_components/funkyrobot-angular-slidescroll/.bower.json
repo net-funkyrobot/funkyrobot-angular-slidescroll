@@ -9,11 +9,11 @@
     "angular": "~1.3.15"
   },
   "homepage": "https://github.com/net-funkyrobot/funkyrobot-angular-slidescroll",
-  "_release": "c29744a54f",
+  "_release": "23df2a6ab0",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c29744a54f3b9c1587d47738e2d9ec443247bfdb"
+    "commit": "23df2a6ab07c6e259d8e4ff835a1fede73e970e8"
   },
   "_source": "git://github.com/net-funkyrobot/funkyrobot-angular-slidescroll.git",
   "_target": "*",
