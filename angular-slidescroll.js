@@ -1,4 +1,3 @@
-// You need to rewrite this to use Angular JS events API
 var app = angular.module('frSlidescroll', ['ngTouch']);
 
 app.directive('frSlidescroll', ['$document', function($document) {
