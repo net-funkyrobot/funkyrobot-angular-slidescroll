@@ -11,15 +11,37 @@ Within `<slidescroll></slidescroll>` create `<slide></slide>` elements and place
 
 ## Quick example
 
+### HTML - demo.html
 ```HTML
-<slidescroll>
-    <slide>
-        <h2>Slide #1</h2>
-          <p>This will be the first slide, navigate slides by scrolling/arrow keys.</p>
-    </slide>
-    <slide>
-        <h2>Slide #2</h2>
-        <p>The second slide.</p>
-    </slide>
-</slidescroll>
+<head>
+    <meta charset="UTF-8">
+    <title>Funkyrobot Angular Slidescroll UI</title>
+
+    <!-- Angular slidescroll required resources -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.css" />
+
+    <!-- Demo related resources -->
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+
+</head>
+<body ng-app="demoApp">
+    <slidescroll>
+        <slide>
+            <h2>Slide #1</h2>
+              <p>This will be the first slide, navigate slides by scrolling/arrow keys.</p>
+        </slide>
+        <slide>
+            <h2>Slide #2</h2>
+            <p>The second slide.</p>
+        </slide>
+    </slidescroll>
+</body>
+```
+
+### Javascript - demo.js
+```JS
+angular.module('demoApp', ['frSlidescroll']);
 ```
