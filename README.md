@@ -1,3 +1,5 @@
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
 # funkyrobot-angular-slidescroll
 
 ![Slidescroll in action](http://i.imgur.com/Cqy1bkK.gif)
@@ -9,8 +11,6 @@ funkyrobot-angular-slidecroll is an Angular JS component that comprises a set of
 Slide transitions are driven by JavaScript events which makes hooking up custom slide controls easy.
 
 Based on [One Page Scroll by Pete R](https://github.com/peachananr/onepage-scroll).
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 To start create a `<slidescroll></slidescroll>` element within an Angular JS app. This will initialise the slide scroll 
 layout and binds all the necessary events (keyboard, scroll events).
