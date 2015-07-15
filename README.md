@@ -17,7 +17,8 @@ Finally in your Angular app's module definition, specify `frSlidescroll` as a de
  
 And that's it!
 
-## Quick example (see `demos/simple_example` for a complete example)
+## Quick example
+(see `demos/simple_example` for a complete example)
 
 ### HTML - demo.html
 ```HTML
