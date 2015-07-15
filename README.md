@@ -13,14 +13,16 @@ Within `<slidescroll></slidescroll>` create `<slide></slide>` elements and place
 
 ### HTML - demo.html
 ```HTML
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Funkyrobot Angular Slidescroll UI</title>
 
     <!-- Angular slidescroll required resources -->
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.js"></script>
-    <link rel="stylesheet" type="text/css" href="bower_components/funkyrobot-angular-slidescroll/angular-slidescroll.css" />
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-slidescroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="angular-slidescroll.css" />
 
     <!-- Demo related resources -->
     <script type="text/javascript" src="demo.js"></script>
@@ -39,6 +41,7 @@ Within `<slidescroll></slidescroll>` create `<slide></slide>` elements and place
         </slide>
     </slidescroll>
 </body>
+</html>
 ```
 
 ### Javascript - demo.js
