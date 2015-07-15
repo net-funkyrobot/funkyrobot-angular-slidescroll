@@ -11,13 +11,15 @@ Within `<slidescroll></slidescroll>` create `<slide></slide>` elements and place
 
 ## Quick example
 
-> <slidescroll>
->   <slide>
->       <h2>Slide #1</h2>
->       <p>This will be the first slide, navigate slides by scrolling/arrow keys.</p>
->   </slide>
->   <slide>
->       <h2>Slide #2</h2>
->       <p>The second slide.</p>
->   </slide>
-> </slidescroll>
+```
+<slidescroll>
+    <slide>
+        <h2>Slide #1</h2>
+          <p>This will be the first slide, navigate slides by scrolling/arrow keys.</p>
+    </slide>
+    <slide>
+        <h2>Slide #2</h2>
+        <p>The second slide.</p>
+    </slide>
+</slidescroll>
+```
