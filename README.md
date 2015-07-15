@@ -1,8 +1,12 @@
 # funkyrobot-angular-slidescroll
 
+![Slidescroll in action](https://imgflip.com/gif/o95p2)
+
 Full screen, slide based layout with scroll/keyboard event transition.
 
 funkyrobot-angular-slidecroll is an Angular JS component that comprises a set of Angular directives.
+
+Slide transitions are driven by JavaScript events which makes hooking up custom slide controls easy.
 
 To start create a `<slidescroll></slidescroll>` element within an Angular JS app. This will initialise the slide scroll 
 layout and binds all the necessary events (keyboard, scroll events).
