@@ -11,7 +11,7 @@ Within `<slidescroll></slidescroll>` create `<slide></slide>` elements and place
 
 ## Quick example
 
-```
+```HTML
 <slidescroll>
     <slide>
         <h2>Slide #1</h2>
