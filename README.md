@@ -1,6 +1,6 @@
 # funkyrobot-angular-slidescroll
 
-![Slidescroll in action](https://imgflip.com/gif/o95p2)
+![Slidescroll in action](http://i.imgur.com/Cqy1bkK.gif)
 
 Full screen, slide based layout with scroll/keyboard event transition.
 
