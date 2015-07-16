@@ -21,6 +21,14 @@ Finally in your Angular app's module definition, specify `frSlidescroll` as a de
  
 And that's it!
 
+## Bower instructions
+
+Easily manage this component with Bower with:
+
+`bower install net-funkyrobot/funkyrobot-angular-slidescroll`
+
+This downloads the all the necessary files to `bower_components/funkyrobot-angular-slidescroll`.
+
 ## Quick example
 (see `demos/simple_example` for a complete example)
 
