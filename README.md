@@ -23,7 +23,7 @@ And that's it!
 
 ## Bower instructions
 
-Easily manage this component with Bower with:
+Easily manage this component with Bower by:
 
 `bower install net-funkyrobot/funkyrobot-angular-slidescroll`
 
