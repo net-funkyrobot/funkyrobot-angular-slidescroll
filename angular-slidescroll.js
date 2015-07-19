@@ -161,7 +161,7 @@ app.directive('slidescroll', ['$document', function($document) {
 
                     // Roll forward by the number of slides of the current slide index
                     moveForward = true;
-                    numberSlides = scope.numSlides - scope.currentSlideIndex;
+                    numberSlides = (scope.numSlides - scope.currentSlideIndex) - 1;
                     break;
 
                 default:
