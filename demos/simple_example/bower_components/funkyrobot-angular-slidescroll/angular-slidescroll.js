@@ -30,7 +30,6 @@ app.directive('slidescroll', ['$document', function($document) {
             if ($scope.beforeTransitionCallback !== null
                 && typeof $scope.beforeTransitionCallback === 'function') {
 
-                console.log("Before callback about to fire");
                 $scope.beforeTransitionCallback({toSlide: toSlide, fromSlide: fromSlide});
             }
 

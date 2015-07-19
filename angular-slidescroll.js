@@ -135,14 +135,14 @@ app.directive('slidescroll', ['$document', function($document) {
             var numberSlides = 0;
 
             switch (event.which) {
-                case 34: // Page down
+                case 33: // Page up
                 case 38: // Up key
 
                     moveForward = false;
                     numberSlides = 1;
                     break;
 
-                case 33: // Page up
+                case 34: // Page down
                 case 32: // Spacebar
                 case 40: // Down arrow
 
@@ -155,6 +155,13 @@ app.directive('slidescroll', ['$document', function($document) {
                     // Roll backward by the number of slides of the current slide index
                     moveForward = false;
                     numberSlides = scope.currentSlideIndex;
+                    break;
+
+                case 35: // End key
+
+                    // Roll forward by the number of slides of the current slide index
+                    moveForward = true;
+                    numberSlides = scope.numSlides - scope.currentSlideIndex;
                     break;
 
                 default:
