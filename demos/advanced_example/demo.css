@@ -1,0 +1,23 @@
+.slidescroll-root .slide {
+    padding-top: 150px;
+    padding-bottom: 75px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    height: 120px;
+    width: 100%;
+}
+
+#demo-controls {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    height: 55px;
+    width: 100%;
+}

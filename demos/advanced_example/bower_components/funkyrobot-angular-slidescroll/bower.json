@@ -1,0 +1,12 @@
+{
+    "name": "funkyrobot-angular-slidescroll",
+    "version": "0.0.7",
+    "main": "angular-slidescroll.js",
+    "ignore": [
+        "**/.*",
+        "demos"
+    ],
+    "dependencies": {
+        "angular": "~1.4.3"
+    }
+}

@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400ms;
+    transition: opacity 400ms;
+}
+
+body, .slidescroll-root, html {
+    display: block;
+    position: static;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slidescroll-root {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+}
+
+.slidescroll-root .slide {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
