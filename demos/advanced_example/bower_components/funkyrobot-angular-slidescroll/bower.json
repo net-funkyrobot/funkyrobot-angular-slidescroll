@@ -1,6 +1,6 @@
 {
     "name": "funkyrobot-angular-slidescroll",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "main": "angular-slidescroll.js",
     "ignore": [
         "**/.*",
