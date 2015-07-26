@@ -21,41 +21,96 @@
 
         <slide>
             <div class="container">
-                <h1>Basic transitions</h1>
-                <p class="lead">
-                    The directive supports some basic controls for slide transitions.
-                </p>
-                <p>
-                    Scroll up and down or press the <kbd>up</kbd> and <kbd>down</kbd> arrow keys to navigate between slides.
-                </p>
-                <p>
-                    <kbd>page up</kbd> and <kbd>page down</kbd> will also navigate up and down between slides.
-                </p>
-                <p>
-                    <kbd>Space</kbd> will also advance by one slide.
-                </p>
-                <p>
-                    The <kbd>home</kbd> key (<kbd>fn + left</kbd> on a Mac) will move to the first slide.
-                </p>
-                <p>
-                    The <kbd>end</kbd> key (<kbd>fn + right</kbd> on a Mac) will move to the last slide.
-                </p>
+                <div class="col-xs-8">
+                    <h1>What it does</h1>
+                    <p class="lead">
+                        Angular slidescroll enables a full-screen, slide based layout with keyboard and scroll slide transition.
+                    </p>
+                    <p class="lead">
+                        <code>funkyrobot-angular-slidecroll</code> is an Angular JS directive that can be installed as a
+                        JavaScript component with <code>bower</code>.
+                    </p>
+                    <p>
+                        Slide transitions are driven by JavaScript events which makes hooking up custom slide controls easy.
+                    </p>
+                    <p>
+                        Using the directive is easy! Just create a <code>&lt;slidescroll&gt;&lt;/slidescroll&gt;</code>
+                        element within an Angular JS app (inside the element with the <code>ng-app="myApp"</code> attribute).
+                    </p>
+                    <p>
+                        Within <code>&lt;slidescroll&gt;&lt;/slidescroll&gt;</code>, create
+                        <code>&lt;slide&gt;&lt;/slide&gt;</code> elements and place your slide contents within this.
+                    </p>
+                    <p>
+                        Finally, within your Angular JS app's module definition, specify <code>frSlidescroll</code> as a
+                        dependency.
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <blockquote class="blockquote-reverse bg-white-20">
+                        <p class="lead">
+                            Angular slidescroll supports basic transition controls
+                        </p>
+                        <p>
+                            To scroll up press the <kbd>up</kbd> key, <kbd>page up</kbd> key or scroll upwards.
+                        </p>
+                        <p>
+                            To scroll down press the <kbd>down</kbd> key, <kbd>page down</kbd> key, press <kbd>space</kbd> or just scroll downwards.
+                        </p>
+                        <p>
+                            The <kbd>home</kbd> and <kbd>end</kbd> keys move to the first and last slides respectively.
+                        </p>
+                    </blockquote>
+                </div>
             </div>
         </slide>
 
         <slide>
             <div class="container">
-                <h1>Overlays, headers and footers</h1>
-                <p class="lead">
-                    You can display elements as overlays, on-top of slides.
-                </p>
-                <p>
-                    Ensure any overlay element is defined <strong>after</strong> the <code>&lt;slidescroll&gt;</code>
-                    element. Make sure it is positioned as a <code>fixed</code> element and given a position relative to the top,
-                    bottom, left or right of the browser window.
-                </p>
-                <p>
-                    <pre>&lt;slidescroll&gt;
+                <div class="col-xs-8">
+                    <h1>I need an example</h1>
+                    <p><code>Angular JS module definition</code></p>
+                    <pre>angular.module('demoApp', ['frSlidescroll']);</pre>
+                    <pre>
+&lt;head&gt;
+    &lt;!-- Angular slidescroll required resources --&gt;
+    &lt;script type="text/javascript" src="angular.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="angular-slidescroll.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" type="text/css" href="angular-slidescroll.css" /&gt;
+
+    &lt;!-- Demo related resources --&gt;
+    &lt;script type="text/javascript" src="demo.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" type="text/css" href="demo.css"&gt;
+&lt;/head&gt;
+&lt;body ng-app="demoApp"&gt;
+    &lt;slidescroll&gt;
+        &lt;slide&gt;
+            &lt;h2&gt;Slide #1&lt;/h2&gt;
+        &lt;/slide&gt;
+        &lt;slide&gt;
+            &lt;h2&gt;Slide #2&lt;/h2&gt;
+        &lt;/slide&gt;
+    &lt;/slidescroll&gt;
+&lt;/body&gt;
+</pre>
+                </div>
+            </div>
+        </slide>
+
+        <slide>
+            <div class="container">
+                <div class="col-xs-8">
+                    <h1>Overlays, headers and footers</h1>
+                    <p class="lead">
+                        You can display elements as overlays, on-top of slides.
+                    </p>
+                    <p>
+                        Ensure any overlay element is defined <strong>after</strong> the <code>&lt;slidescroll&gt;</code>
+                        element. Make sure it is positioned as a <code>fixed</code> element and given a position relative to the top,
+                        bottom, left or right of the browser window.
+                    </p>
+                    <p>
+                        <pre>&lt;slidescroll&gt;
     ...
 &lt;/slidescroll&gt;
 
@@ -73,33 +128,36 @@
     height: 120px;
     width: 100%;
 }</pre>
-                </p>
+                    </p>
+                </div>
             </div>
         </slide>
 
         <slide>
             <div class="container">
-                <h1>Slide transition event interface</h1>
-                <p class="lead">
-                    The buttons on the panel below are custom transition controls which use the event driven interface.
-                </p>
-                <p>
-                    Each button's click handler simply broadcasts either a <code>TransitionEvent</code> or
-                    <code>TransitionToEvent</code> event using Angular's <code>$scope.$broadcast()</code> function.
-                </p>
-                <p>
-                    <pre>// 'TransitionEvent', slideDelta (difference from current slide)
+                <div class="col-xs-8">
+                    <h1>Slide transition event interface</h1>
+                    <p class="lead">
+                        The buttons on the panel below are custom transition controls which use the event driven interface.
+                    </p>
+                    <p>
+                        Each button's click handler simply broadcasts either a <code>TransitionEvent</code> or
+                        <code>TransitionToEvent</code> event using Angular's <code>$scope.$broadcast()</code> function.
+                    </p>
+                    <p>
+                        <pre>// 'TransitionEvent', slideDelta (difference from current slide)
 $scope.$broadcast('TransitionEvent', -1);</pre>
-                </p>
-                <p>
-                    <pre>// 'TransitionToEvent', slideIndex (index of the slide to transition to)
+                    </p>
+                    <p>
+                        <pre>// 'TransitionToEvent', slideIndex (index of the slide to transition to)
 $scope.$broadcast('TransitionToEvent', 2);</pre>
-                </p>
-                <p>
-                    If the event is fired from outside the directive's scope, from your app's controller for example, use
-                    Angular JS' <code>$scope.$broadcast()</code> function. If the event is being fired from within the
-                    <code>slidescroll</code> element's scope use <code>$scope.$emit()</code>.
-                </p>
+                    </p>
+                    <p>
+                        If the event is fired from outside the directive's scope, from your app's controller for example, use
+                        Angular JS' <code>$scope.$broadcast()</code> function. If the event is being fired from within the
+                        <code>slidescroll</code> element's scope use <code>$scope.$emit()</code>.
+                    </p>
+                </div>
             </div>
         </slide>
 
@@ -107,6 +165,7 @@ $scope.$broadcast('TransitionToEvent', 2);</pre>
 
     <div id="header">
         <div class="container">
+            <div id="logo"></div>
             <h1>Funkyrobot Angular Slidescroll UI</h1>
             <h4>An Angular JS directive</h4>
         </div>

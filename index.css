@@ -1,6 +1,7 @@
 .slidescroll-root .slide {
     padding-top: 150px;
     padding-bottom: 75px;
+    background: url("logo_bg.png") no-repeat 120% -50%;
 }
 
 #header {
@@ -12,6 +13,15 @@
     width: 100%;
 }
 
+#logo {
+    background-image: url("logo.png");
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 #demo-controls {
     position: fixed;
     bottom: 0;
@@ -20,4 +30,8 @@
     color: #fff;
     height: 55px;
     width: 100%;
+}
+
+.bg-white-20 {
+    background-color: rgba(255, 255, 255, 0.7);
 }
