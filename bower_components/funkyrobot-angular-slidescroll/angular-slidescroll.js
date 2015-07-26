@@ -218,17 +218,12 @@ app.directive('slide', function() {
         element.on('$destroy', function() {
             slidescrollController.removeSlide(scope.slideNum)
         });
-
-        element.css('background', 'url(' + scope.backgroundImage + ')');
     }
 
     return {
         require: "^slidescroll",
         transclude: true,
         link: link,
-        scope: {
-            backgroundImage: '=ssBackgroundImage'
-        },
         template: "<div ng-transclude></div>"
     }
 
