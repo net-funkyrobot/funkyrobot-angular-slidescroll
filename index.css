@@ -1,7 +1,11 @@
 .slidescroll-root .slide {
     padding-top: 150px;
     padding-bottom: 75px;
-    background: url("logo_bg.png") no-repeat 120% -50%;
+    background: #fff url("logo_bg.png") no-repeat 120% -50%;
+}
+
+.slidescroll-root .slide:nth-child(odd) {
+    background-color: #f6fbff;
 }
 
 #header {
