@@ -2,6 +2,8 @@
 
 Based on [One Page Scroll by Pete R](https://github.com/peachananr/onepage-scroll).
 
+## Demo and documentation [here](http://net-funkyrobot.github.io/funkyrobot-angular-slidescroll/)
+
 # funkyrobot-angular-slidescroll
 
 ![Slidescroll in action](http://i.imgur.com/Cqy1bkK.gif)
