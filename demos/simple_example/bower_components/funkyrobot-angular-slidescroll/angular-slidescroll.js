@@ -72,8 +72,12 @@ app.directive('slidescroll', ['$document', function($document) {
             var pos = toSlide * 100;
 
             // Transform to position with ease transition animation
+            $scope.viewFinderElement.css("transform", "translate3d(0, -" + pos + "%, 0)");
+            $scope.viewFinderElement.css("transition", "all 800ms ease");
             $scope.viewFinderElement.css("-webkit-transform", "translate3d(0, -" + pos + "%, 0)");
             $scope.viewFinderElement.css("-webkit-transition", "all 800ms ease");
+            $scope.viewFinderElement.css("-moz-transform", "translate3d(0, -" + pos + "%, 0)");
+            $scope.viewFinderElement.css("-moz-transition", "all 800ms ease");
         };
 
         this.addSlide = function(slideScope, slideElement) {
@@ -105,21 +109,26 @@ app.directive('slidescroll', ['$document', function($document) {
 
         var inTransition = false;
 
-        scope.$on('TransitionEvent', function(event, moveForward, numberSlides) {
-            // Check arguments
-            if (typeof moveForward !== 'boolean') {
-                return;
-            }
-            if (typeof numberSlides !== 'number') {
+        scope.$on('TransitionEvent', function(event, slideDelta) {
+            // Check argument
+            slideDelta = parseInt(slideDelta);
+            if (typeof slideDelta !== 'number') {
                 return;
             }
 
             // Move forward or backward by numberSlides
-            if (moveForward) {
-                controller.transformTo(scope.currentSlideIndex + numberSlides);
-            } else {
-                controller.transformTo(scope.currentSlideIndex - numberSlides);
+            controller.transformTo(scope.currentSlideIndex + slideDelta);
+        });
+
+        scope.$on('TransitionToEvent', function(event, slideIndex) {
+            // Check slideIndex argument
+            slideIndex = parseInt(slideIndex);
+            if (typeof slideIndex !== 'number') {
+                return;
             }
+
+            // Move controller to slideIndex
+            controller.transformTo(slideIndex);
         });
 
         // Bind keyboard events
@@ -132,29 +141,32 @@ app.directive('slidescroll', ['$document', function($document) {
 
             // Determine transition info
             var moveForward = true;
-            var numberSlides = 0;
+            var slideDelta = 0;
 
             switch (event.which) {
-                case 34: // Page down
+                case 33: // Page up
                 case 38: // Up key
 
-                    moveForward = false;
-                    numberSlides = 1;
+                    slideDelta = -1;
                     break;
 
-                case 33: // Page up
+                case 34: // Page down
                 case 32: // Spacebar
                 case 40: // Down arrow
 
-                    moveForward = true;
-                    numberSlides = 1;
+                    slideDelta = 1;
                     break;
 
                 case 36: // Home key
 
                     // Roll backward by the number of slides of the current slide index
-                    moveForward = false;
-                    numberSlides = scope.currentSlideIndex;
+                    slideDelta = scope.currentSlideIndex;
+                    break;
+
+                case 35: // End key
+
+                    // Roll forward by the number of slides of the current slide index
+                    slideDelta = (scope.numSlides - scope.currentSlideIndex) - 1;
                     break;
 
                 default:
@@ -162,7 +174,7 @@ app.directive('slidescroll', ['$document', function($document) {
             }
 
             // Fire transition event to move
-            scope.$emit('TransitionEvent', moveForward, numberSlides);
+            scope.$emit('TransitionEvent', slideDelta);
 
         });
 
@@ -175,12 +187,11 @@ app.directive('slidescroll', ['$document', function($document) {
             if (!scope.inTransition && !scope.quietPeriod) {
 
                 // Determine if we're going forward or backward
-                var moveForward = true;
                 if (event.wheelDelta > 0) {
-                    moveForward = false;
+                    scope.$emit('TransitionEvent', -1);
+                } else {
+                    scope.$emit('TransitionEvent', 1);
                 }
-
-                scope.$emit('TransitionEvent', moveForward, 1);
 
             }
 
@@ -211,17 +222,12 @@ app.directive('slide', function() {
         element.on('$destroy', function() {
             slidescrollController.removeSlide(scope.slideNum)
         });
-
-        element.css('background', 'url(' + scope.backgroundImage + ')');
     }
 
     return {
         require: "^slidescroll",
         transclude: true,
         link: link,
-        scope: {
-            backgroundImage: '=ssBackgroundImage'
-        },
         template: "<div ng-transclude></div>"
     }
 
