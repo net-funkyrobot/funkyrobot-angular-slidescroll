@@ -72,8 +72,12 @@ app.directive('slidescroll', ['$document', function($document) {
             var pos = toSlide * 100;
 
             // Transform to position with ease transition animation
+            $scope.viewFinderElement.css("transform", "translate3d(0, -" + pos + "%, 0)");
+            $scope.viewFinderElement.css("transition", "all 800ms ease");
             $scope.viewFinderElement.css("-webkit-transform", "translate3d(0, -" + pos + "%, 0)");
             $scope.viewFinderElement.css("-webkit-transition", "all 800ms ease");
+            $scope.viewFinderElement.css("-moz-transform", "translate3d(0, -" + pos + "%, 0)");
+            $scope.viewFinderElement.css("-moz-transition", "all 800ms ease");
         };
 
         this.addSlide = function(slideScope, slideElement) {

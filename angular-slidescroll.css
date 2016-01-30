@@ -1,9 +1,9 @@
 body, html {
     margin: 0;
     overflow: hidden;
+    transition: opacity 400ms;
     -webkit-transition: opacity 400ms;
     -moz-transition: opacity 400ms;
-    transition: opacity 400ms;
 }
 
 body, .slidescroll-root, html {
@@ -16,6 +16,7 @@ body, .slidescroll-root, html {
 
 .slidescroll-root {
     position: relative;
+    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
